@@ -19,12 +19,12 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            // crossAxisAlignment: CrossAxisAlignment.center,
             // ignore: prefer_const_literals_to_create_immutables
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage("images/pfp.jpg"),
+                backgroundColor: Color(0xFF7e1e22),
               ),
               SizedBox(height: 10.0,),
               Text(
@@ -46,8 +46,9 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 5.0
               ),
                 ),
+              SizedBox(height: 10.0,),
                 
-              Card(
+              Card(  // a white (cardboard) wrapper for ListTile
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: ListTile(
                   leading: Icon(
@@ -66,7 +67,7 @@ class MyApp extends StatelessWidget {
               ),
 
               Card(
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),  // Or else it extentds to the far ends
                 child: ListTile(
                   leading: Icon(
                     Icons.email,
